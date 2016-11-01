@@ -9,7 +9,10 @@
 
 @import 'normalize';
 @import 'typography';
+@import 'variables';
+@import 'mixins';
 @import 'navigation';
+@import 'hero-header';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
@@ -42,10 +45,8 @@ body {
 	width: 100%;
 }
 
-
-
-
-
-
-
-
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 1140px;
+}

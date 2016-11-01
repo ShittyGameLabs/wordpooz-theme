@@ -1,0 +1,31 @@
+.hero {
+	text-align: center;
+	text-transform: uppercase;
+	height: 100vh;
+	min-height: 600px;
+	background-size: cover;
+	background-position: center;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	h1 {
+		@include fontStyle(5rem, 600, white, 5px);
+	}
+	h2 {
+		@include fontStyle(1.5rem, 300, white, 5px);
+	}
+	.btn___header {
+		display: block;
+		width: 200px;
+		margin: 5% auto;
+		background: white;
+		padding: 10px 20px;
+		@include fontStyle(.8rem, 400, black, 3px);
+	}
+	img {
+		max-width: 200px;
+	}
+	.hero-content {
+		margin: auto;
+	}
+}

@@ -1,6 +1,24 @@
 <footer>
-  <div class="container">
-    <p>&copy; M & W <?php echo date('Y'); ?></p>
+  <div class="footer___social-media">
+    <div class="wrapper">
+      <ul>
+        <?php
+          while(have_rows('social_media')) : the_row();
+          ?>
+          <li>
+            <a href="<?php the_sub_field('social_media_url') ?>"><?php the_sub_field('social_media_name'); ?></a>
+          </li>
+        <?php endwhile; ?>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="wrapper">
+      <p>
+        <?php the_field('copyright'); ?>
+      </p>
+      <a href="#top">To The Top ^</a>
+    </div>
   </div>
 </footer>
 
