@@ -88,3 +88,22 @@
 		transition:0.8s all ease;
 	}
 }
+
+//work
+
+.work{
+	display:flex;
+	.work-container{
+		flex:1 1 50%;
+		height:400px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		display:flex;
+		div{
+			color:white;
+			margin-top:40%;
+			margin-left:15%;
+		}
+	}
+}
+
