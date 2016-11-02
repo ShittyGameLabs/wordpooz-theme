@@ -95,11 +95,36 @@ get_header();  ?>
       <h2><?php the_sub_field('work-title') ?></h2>
       <p><?php the_sub_field('work-tagline') ?></p>
     </div>
-  </div>  
-  <?php endwhile; ?>  
+  </div>
+  <?php endwhile; ?>
 </section>
 <section class="blog">
   <div class="wrapper">
+    <h2>Recent Posts</h2>
+    <div class="blog___wrapper">
+      <?php
+          $recentPosts = new WP_Query(array(
+              'posts_per_page' => 3,
+              'order' => 'DESC'
+              )
+      ); ?>
+      <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
+            <div class="home___blog---box" id="<?php echo $post->post_name; ?>">
+              <div class="blog___background" style="background-image:url(<?php the_post_thumbnail_url('medium'); ?>)">
+              </div>
+              <div class="blog___excerpt">
+                <h3><?php the_title(); ?></h3>
+                <?php
+                 $content = get_the_excerpt();
+                 ?>
+                 <p>
+                   <?php echo $content ?>
+                 </p>
+              </div>
+             </div>
+         <?php endwhile; ?>
+         <?php wp_reset_query(); ?>
+    </div>
   </div>
 </section>
 
