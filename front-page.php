@@ -39,33 +39,44 @@ get_header();  ?>
     <h1><?php the_field('project-title') ?></h1>
     <h2><?php the_field('project-tagline') ?></h2>
       <div class="project-wrapper">
-        <div class="figure-container">
-        <?php
-        while(have_rows('project-box')) : the_row();
-        ?>
-            <figure>
-              <?php $projectImage = get_sub_field('project-image'); ?>
-              <img src="<?php echo $projectImage['url'] ?>" alt="">
+        <div class="figure-container-1">
+        <?php while(have_rows('project-box')) : the_row(); ?>
+        <?php $projectImage = get_sub_field('project-image'); ?>
+            <figure class="figure1" style="background-image:url('<?php echo $projectImage['url'] ?>')">
+              <div class="project-text">
+                <h3><?php the_sub_field('project-name') ?></h3>
+                <p>
+                  <?php the_sub_field('project-description') ?>
+                </p>
+              </div>
             </figure>
             <?php endwhile; ?>
         </div>
         <div class="figure-container-2">
-            <?php while(have_rows('project-box-two')) : the_row();
-            ?>
-            <figure>
-              <?php $projectImage = get_sub_field('project-image-two'); ?>
-              <img src="<?php echo $projectImage['url'] ?>" alt="">
-            </figure>                 
-            <?php endwhile; ?>  
+            <?php while(have_rows('project-box-two')) : the_row(); ?>
+            <?php $projectImage = get_sub_field('project-image-two'); ?>
+            <figure class="figure2" style="background-image:url('<?php echo $projectImage['url']; ?>')">
+              <div class="project-text">
+                <h3><?php the_sub_field('project-name-two') ?></h3>
+                <p>
+                  <?php the_sub_field('project-description-two') ?>
+                </p>
+              </div>
+            </figure>
+            <?php endwhile; ?>
         </div>
         <div class="figure-container-3">
-            <?php while(have_rows('project-box-three')) : the_row();
-            ?>
-            <figure>
+            <?php while(have_rows('project-box-three')) : the_row(); ?>
               <?php $projectImage = get_sub_field('project-image-three'); ?>
-              <img src="<?php echo $projectImage['url'] ?>" alt="">
-            </figure>                 
-            <?php endwhile; ?>  
+              <figure class="figure3" style="background-image: url('<?php echo $projectImage['url'] ?>')">
+                <div class="project-text">
+                  <h3><?php the_sub_field('project-name-three') ?></h3>
+                  <p>
+                    <?php the_sub_field('project-description-three') ?>
+                  </p>
+                </div>
+              </figure>
+            <?php endwhile; ?>
         </div>
       </div>
   </div>
