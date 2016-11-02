@@ -2,15 +2,10 @@
 	padding:100px 0;
 	h1,h2 {
 		text-align: center;
-		text-transform:uppercase;
 	}
-	h1{
-		font-size:1.8rem;
-	}
+
 	h2 {
 		margin:15px 0;
-		@include fontStyle($montserrat, 1rem, 700, $darkgrey, 2px);
-
 	}
 }
 
@@ -25,12 +20,10 @@
 		text-align: center;
 		padding:20px;
 		h3 {
-			@include fontStyle($montserrat, 1rem, 700, $darkgrey, 1px);
 			margin-bottom:15px;
-			text-transform:uppercase;
 		}
 		p {
-			@include fontStyle(sans-serif, 1rem, 400, $grey, 1px);
+			@include fontStyle($font, 1rem, 400, $grey, 0.5px);
 			line-height:1.4rem;
 		}
 		img {
@@ -43,6 +36,8 @@
 
 //project section
 .projects{
+	background: $lightgrey;
+	padding: 100px 0;
 	.project-wrapper{
 		display:flex;
 		justify-content: center;
@@ -55,12 +50,10 @@
 			background-size: cover;
 			margin: 10px 5px;
 			position: relative;
-			transition:1s all ease;
-			&:hover .project-text{
-				transition:1s all ease;
+			&:hover .overlay{
 				bottom:0;
 				opacity:1;
-				display:block;
+				display:flex;
 				height:100%;
 			}
 		}
@@ -80,15 +73,19 @@
 	.figure3:last-of-type {
 			height: 300px;
 	}
+	.overlay {
+			position:absolute;
+			overflow:hidden;
+			bottom: 0;
+			height: 0;
+			width: 100%;
+			background: rgba(255,255,255,0.8);
+			transition:0.8s all ease;
+			display: flex;
+	}
 	.project-text {
-		position:absolute;
-		overflow:hidden;
-		// opacity: 0;
-		bottom: 0;
-		height:0;
-		width: 100%;
-		background: rgba(255,255,255,0.8);
-		transition:1s all ease;
+			width: 80%;
+			margin: auto;
 	}
 }
 
@@ -110,3 +107,47 @@
 	}
 }
 
+//blog
+
+.blog {
+	.blog___wrapper {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+	.home___blog---box {
+		flex: 1 1 30%;
+		margin: 2%;
+		height: 500px;
+		box-shadow: 0 0 3px rgba(0,0,0,0.2);
+		position: relative
+	}
+	.blog___background {
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	}
+	.blog___excerpt {
+		padding: 20px;
+	}
+	h3 {
+		@include fontStyle($montserrat, 1rem, 700, black, 5px);
+		text-transform: uppercase;
+		margin: 20px 0;
+	}
+
+	a {
+		@include fontStyle($montserrat, 0.8rem, 400, white, 1px);
+		text-transform: uppercase;
+		text-align: center;
+		width: 180px;
+		background: black;
+		padding: 10px 0;
+		position: absolute;
+		bottom: 20px;
+		display: block;
+	}
+}

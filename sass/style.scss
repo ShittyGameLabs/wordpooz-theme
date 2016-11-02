@@ -29,6 +29,7 @@ img {
 
 body {
 	color: #333;
+	font-family: $font;
 }
 
 .container {
@@ -50,4 +51,15 @@ body {
 	width: 85%;
 	margin: 0 auto;
 	max-width: 1140px;
+}
+section{
+	h1 {
+		@include fontStyle($montserrat, 1.8rem, 700, $darkgrey, 3px);
+	}
+	h2{
+		@include fontStyle($font, 1rem, 700, $darkgrey, 2px);
+	}
+	h3 {
+		@include fontStyle($montserrat, 1rem, 700, $darkgrey, 2px);
+	}
 }

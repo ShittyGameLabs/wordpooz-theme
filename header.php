@@ -7,7 +7,7 @@
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
