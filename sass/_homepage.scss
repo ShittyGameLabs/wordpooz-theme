@@ -55,9 +55,7 @@
 			background-size: cover;
 			margin: 10px 5px;
 			position: relative;
-			transition:1s all ease;
 			&:hover .project-text{
-				transition:1s all ease;
 				bottom:0;
 				opacity:1;
 				display:block;
@@ -83,11 +81,10 @@
 	.project-text {
 		position:absolute;
 		overflow:hidden;
-		// opacity: 0;
 		bottom: 0;
-		height:0;
+		height: 0;
 		width: 100%;
 		background: rgba(255,255,255,0.8);
-		transition:1s all ease;
+		transition:0.8s all ease;
 	}
 }

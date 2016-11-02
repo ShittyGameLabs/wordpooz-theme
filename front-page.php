@@ -43,11 +43,13 @@ get_header();  ?>
         <?php while(have_rows('project-box')) : the_row(); ?>
         <?php $projectImage = get_sub_field('project-image'); ?>
             <figure class="figure1" style="background-image:url('<?php echo $projectImage['url'] ?>')">
-              <div class="project-text">
-                <h3><?php the_sub_field('project-name') ?></h3>
-                <p>
-                  <?php the_sub_field('project-description') ?>
-                </p>
+              <div class="overlay">
+                <div class="project-text">
+                  <h3><?php the_sub_field('project-name') ?></h3>
+                  <p>
+                    <?php the_sub_field('project-description') ?>
+                  </p>
+                </div>
               </div>
             </figure>
             <?php endwhile; ?>
@@ -56,11 +58,13 @@ get_header();  ?>
             <?php while(have_rows('project-box-two')) : the_row(); ?>
             <?php $projectImage = get_sub_field('project-image-two'); ?>
             <figure class="figure2" style="background-image:url('<?php echo $projectImage['url']; ?>')">
-              <div class="project-text">
-                <h3><?php the_sub_field('project-name-two') ?></h3>
-                <p>
-                  <?php the_sub_field('project-description-two') ?>
-                </p>
+              <div class="overlay">
+                <div class="project-text">
+                  <h3><?php the_sub_field('project-name-two') ?></h3>
+                  <p>
+                    <?php the_sub_field('project-description-two') ?>
+                  </p>
+                </div>
               </div>
             </figure>
             <?php endwhile; ?>
@@ -69,11 +73,13 @@ get_header();  ?>
             <?php while(have_rows('project-box-three')) : the_row(); ?>
               <?php $projectImage = get_sub_field('project-image-three'); ?>
               <figure class="figure3" style="background-image: url('<?php echo $projectImage['url'] ?>')">
-                <div class="project-text">
-                  <h3><?php the_sub_field('project-name-three') ?></h3>
-                  <p>
-                    <?php the_sub_field('project-description-three') ?>
-                  </p>
+                <div class="overlay">
+                  <div class="project-text">
+                    <h3><?php the_sub_field('project-name-three') ?></h3>
+                    <p>
+                      <?php the_sub_field('project-description-three') ?>
+                    </p>
+                  </div>
                 </div>
               </figure>
             <?php endwhile; ?>
