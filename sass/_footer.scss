@@ -38,16 +38,18 @@
 		}
 }
 .copyright {
+	padding: 20px 0;
 	background: #222;
-
+	@include fontStyle(0.3rem, 600, $grey, 3px);
+	text-transform: uppercase;
 	.wrapper{
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		align-items: center;
-
 	}
 	a {
+		color: inherit;
 		margin-left: auto;
 	}
 }

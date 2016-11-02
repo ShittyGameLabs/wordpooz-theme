@@ -1,0 +1,32 @@
+.about {
+	padding:100px 0;
+	h1,h2 {
+		text-align: center;
+	}
+}
+
+.about___icons {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-around;
+	.about___icons---box {
+		max-width: 300px;
+		flex: 1 1 auto;
+		text-align: center;
+		padding:20px;
+		h3 {
+			@include fontStyle(1.4rem, 600, $darkgrey, 1px);
+			padding:10px;
+		}
+		p {
+			@include fontStyle(1, 300, $grey, 1px);
+			line-height:1.4rem;
+		}
+		img {
+			display: block;
+			max-width: 150px;
+			margin: 0 auto;
+		}
+	}
+}
