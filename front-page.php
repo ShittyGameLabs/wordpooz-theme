@@ -70,5 +70,20 @@ get_header();  ?>
       </div>
   </div>
 </section>
+<section class="work">
+  <?php while(have_rows('work-container')) : the_row();  ?>
+  <?php $workImage = get_sub_field('work-bg-image'); ?>
+  <div class="work-container" style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $workImage['url']?>)">
+    <div>
+      <h2><?php the_sub_field('work-title') ?></h2>
+      <p><?php the_sub_field('work-tagline') ?></p>
+    </div>
+  </div>  
+  <?php endwhile; ?>  
+</section>
+<section class="blog">
+  <div class="wrapper">
+  </div>
+</section>
 
 <?php get_footer(); ?>

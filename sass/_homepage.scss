@@ -51,7 +51,6 @@
 		flex:1 1 33%;
 		flex-direction:column;
 		min-height:300px;
-		height:500px;
 		display:flex;
 		justify-content: flex-start;
 	}
@@ -68,3 +67,22 @@
 		}
 	}
 }
+
+//work
+
+.work{
+	display:flex;
+	.work-container{
+		flex:1 1 50%;
+		height:400px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		display:flex;
+		div{
+			color:white;
+			margin-top:40%;
+			margin-left:15%;
+		}
+	}
+}
+
