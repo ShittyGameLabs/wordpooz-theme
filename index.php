@@ -1,12 +1,17 @@
-<?php //index.php is the last resort template, if no other templates match ?>
-<?php get_header(); ?>
+<?php get_header();  ?>
 
 <div class="main">
   <div class="container">
 
     <div class="content">
-    		<?php get_template_part( 'loop', 'index' );	?>
-    </div> <!--/.content -->
+      <?php // Start the loop ?>
+      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+        WASSUPPPP
+        <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+
+      <?php endwhile; // end the loop?>
+    </div> <!-- /,content -->
 
     <?php get_sidebar(); ?>
 

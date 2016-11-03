@@ -40,7 +40,7 @@
 .copyright {
 	padding: 20px 0;
 	background: #222;
-	@include fontStyle(montserrat, 0.3rem, 700, $grey, 3px);
+	@include fontStyle($montserrat, 0.3rem, 700, $grey, 3px);
 	text-transform: uppercase;
 	.wrapper{
 		display: -webkit-flex;
