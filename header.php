@@ -10,4 +10,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
+<nav>
+	<div class="wrapper">
+		<?php $custom_logo_id = get_theme_mod( 'custom_logo' );?>
+		<?php $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
+		<img class="nav___logo" src="<?php echo $image[0]; ?> " alt="" />
+		<?php wp_nav_menu( array(
+			'container' => false,
+			'theme_location' => 'primary'
+		)); ?>
+	</div>
+</nav>
 <body <?php body_class(); ?>>

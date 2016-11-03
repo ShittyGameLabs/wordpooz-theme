@@ -1,5 +1,4 @@
 .about {
-	padding:100px 0;
 	h1,h2 {
 		text-align: center;
 	}
@@ -37,7 +36,6 @@
 //project section
 .projects{
 	background: $lightgrey;
-	padding: 100px 0;
 	.project-wrapper{
 		display:flex;
 		justify-content: center;
@@ -103,6 +101,13 @@
 			color:white;
 			margin-top:40%;
 			margin-left:15%;
+			h2 {
+				@include fontStyle($montserrat, 1rem, 700, white, 2px);
+				text-align: left;
+			}
+			p {
+				@include fontStyle($font, 1rem, 400, white, 1px);
+			}
 		}
 	}
 }
@@ -110,6 +115,7 @@
 //blog
 
 .blog {
+	background: $lightgrey;
 	.blog___wrapper {
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -117,10 +123,11 @@
 		justify-content: space-between;
 	}
 	.home___blog---box {
+		background: white;
 		flex: 1 1 30%;
 		margin: 2%;
 		height: 500px;
-		box-shadow: 0 0 3px rgba(0,0,0,0.2);
+		box-shadow: 0 2px 3px rgba(0,0,0,0.2);
 		position: relative
 	}
 	.blog___background {
@@ -132,22 +139,93 @@
 	}
 	.blog___excerpt {
 		padding: 20px;
+		padding-top: 5px;
 	}
 	h3 {
-		@include fontStyle($montserrat, 1rem, 700, black, 5px);
+		@include fontStyle($montserrat, 1rem, 700, black, 3px);
 		text-transform: uppercase;
 		margin: 20px 0;
 	}
-
-	a {
+	.blog___readmore {
 		@include fontStyle($montserrat, 0.8rem, 400, white, 1px);
 		text-transform: uppercase;
+		line-height:0.8rem;
 		text-align: center;
 		width: 180px;
 		background: black;
-		padding: 10px 0;
+		padding: 12px 0;
 		position: absolute;
 		bottom: 20px;
 		display: block;
+		transition: 0.3s all ease;
+		&:hover {
+			background: darken($grey, 20);
+		}
+	}
+}
+
+.blog___comments {
+	padding: 20px;
+	padding-bottom: 0;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	// justify-content: space-between;
+	color:#ccc;
+	text-transform: uppercase;
+	@include fontStyle($font, 0.7rem, 400, #ccc, 1px);
+	span {
+		position:relative;
+	}
+	i {
+		font-size:1rem;
+		line-height:1rem;
+		margin-right: 30px;
+		&:after{
+			content:'';
+			position: absolute;
+			right:0;
+			height:20px;
+			width:1px;
+			background: #ccc;
+			top: -2.5px;
+			margin-right: 15px;
+		}
+	}
+}
+
+.blog___comments---link {
+	margin-left: auto;
+	transition: 0.3s all ease;
+	&:hover {
+		color: $darkgrey;
+	}
+}
+
+//contact
+
+.contact___wrapper {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	.contact___field {
+		flex: 1 1 25%;
+		margin: 2%;
+		margin-left: 5%;
+		position: relative;
+		line-height: 1.8rem;
+		&:before {
+			content: '';
+			width: 1px;
+			height: 50px;
+			background: $grey;
+			position: absolute;
+			left: -30px;
+		}
+		p {
+			@include fontStyle($font, 0.9rem, 400, $grey, 1px);
+		}
 	}
 }

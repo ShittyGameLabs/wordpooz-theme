@@ -2,7 +2,6 @@
 /*
 	Template Name: Full Page, No Sidebar
 */
-
 get_header();  ?>
 <?php $heroImage = get_field('header-hero') ?>
 <header class="hero" style="background-image:url('<?php echo $heroImage['url']; ?>')">
@@ -100,7 +99,8 @@ get_header();  ?>
 </section>
 <section class="blog">
   <div class="wrapper">
-    <h2>Recent Posts</h2>
+    <h1><?php the_field('blog-title'); ?></h1>
+    <h2><?php the_field('blog-tagline'); ?></h2>
     <div class="blog___wrapper">
       <?php
           $recentPosts = new WP_Query(array(
@@ -112,11 +112,23 @@ get_header();  ?>
             <div class="home___blog---box" id="<?php echo $post->post_name; ?>">
               <div class="blog___background" style="background-image:url(<?php the_post_thumbnail_url('medium'); ?>)">
               </div>
+              <?php $commentsNumber = get_comments_number(); ?>
+              <?php $blogDate = get_the_date(); ?>
+              <p class="blog___comments">
+                <span class-="span___date">
+                  <i class="fa fa-calendar-o"></i>
+                </span>
+                  <span><?php echo $blogDate; ?></span>
+                <a class="blog___comments---link" href="<?php comments_link(); ?> ">
+                  <span class="span___comments">
+                    <i class="fa fa-comments-o"></i>
+                  </span>
+                  <?php echo $commentsNumber; ?>
+                </a>
+              </p>
               <div class="blog___excerpt">
                 <h3><?php the_title(); ?></h3>
-                <?php
-                 $content = get_the_excerpt();
-                 ?>
+                <?php $content = get_the_excerpt(); ?>
                  <p>
                    <?php echo $content ?>
                  </p>
@@ -124,6 +136,20 @@ get_header();  ?>
              </div>
          <?php endwhile; ?>
          <?php wp_reset_query(); ?>
+    </div>
+  </div>
+</section>
+<section class="contact">
+  <div class="wrapper">
+    <div class="contact___wrapper">
+      <?php while(have_rows('contact')) : the_row() ?>
+        <div class="contact___field">
+          <h3><?php the_sub_field('contact-header') ?></h3>
+          <p>
+            <?php the_sub_field('contact-content') ?>
+          </p>
+        </div>
+      <?php endwhile ?>
     </div>
   </div>
 </section>
