@@ -3,12 +3,33 @@ ul.menu {
 	padding: 0;
 	li {
 		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
-		}
+		margin-right: 50px;
+	}
+}
+
+nav {
+	z-index: 10;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	transition: 0.5s all ease;
+	background: transparent;
+	.wrapper {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-transform: uppercase;
+			a {
+				@include fontStyle($montserrat, 0.8rem, 400, $grey, 3px);
+				transition: 0.3s all ease;
+				&:hover {
+					color: white;
+				}
+			}
+	}
+	img {
+		max-height: 50px;
 	}
 }

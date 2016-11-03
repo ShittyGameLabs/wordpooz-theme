@@ -1,10 +1,28 @@
 a {
-	color: #BA209B;
+	color: inherit;
 	text-decoration: none;
-	&:hover {
-		color: #D424B1;
+}
+
+section{
+	h1 {
+		@include fontStyle($montserrat, 1.8rem, 700, $darkgrey, 3px);
+		margin-bottom: 10px;
+	}
+	h2{
+		@include fontStyle($font, 0.8rem, 400, $grey, 2px);
+		margin-bottom: 10px;
+	}
+	h3 {
+		@include fontStyle($montserrat, 1rem, 700, $darkgrey, 2px);
+	}
+	h1, h2 {
+		text-align: center;
+	}
+	&:not(.work) {
+		padding: 100px 0;
 	}
 }
+
 
 /* paragraphs */
 

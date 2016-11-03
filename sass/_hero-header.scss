@@ -8,11 +8,12 @@
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+	filter: saturate(0.5);
 	h1 {
 		@include fontStyle($montserrat, 4.5rem, 700, white, 15px);
 	}
 	h2 {
-		@include fontStyle($font, 1.2rem, 400, white, 10px);
+		@include fontStyle($montserrat, 1.2rem, 400, white, 10px);
 	}
 	.btn___header {
 		display: block;
