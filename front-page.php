@@ -13,7 +13,7 @@ get_header();  ?>
       <a class="btn___header" href="<?php the_field('header-link'); ?>"><?php the_field('header-link-text'); ?></a>
     </div>
 </header>
-<section class="about" id="about">
+<section class="about" id="nav___anchor">
   <div class="wrapper">
       <h1><?php the_field('about-title'); ?></h1>
       <h2><?php the_field('about-tagline'); ?></h2>

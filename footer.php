@@ -10,7 +10,8 @@
   <div class="copyright">
     <div class="wrapper">
       <p>
-        <?php the_field('copyright'); ?>
+        © <?php echo date("Y"); ?>
+         <?php wp_title(); ?>
       </p>
       <a href="#top">To The Top ^</a>
     </div>
