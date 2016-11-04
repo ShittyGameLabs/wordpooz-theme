@@ -9,3 +9,19 @@
 		}
 	}
 }
+
+input[type=search] {
+	border: 0;
+	width: 200px;
+	padding: 5px;
+	height: 35px;
+	@include fontStyle($font, 0.8rem, 400, $darkgrey, 1px);
+}
+
+input[type=submit] {
+	width: 100px;
+	@include fontStyle($font, 0.8rem, 400, white, 2px);
+	background: black;
+	border: 0;
+	height: 45px;
+}

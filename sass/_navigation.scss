@@ -22,7 +22,7 @@ nav {
 			align-items: center;
 			text-transform: uppercase;
 			a {
-				@include fontStyle($montserrat, 0.8rem, 400, $grey, 3px);
+				@include fontStyle($montserrat, 0.8rem, 400, $lightgrey, 3px);
 				transition: 0.3s all ease;
 				&:hover {
 					color: white;
