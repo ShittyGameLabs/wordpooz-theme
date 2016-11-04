@@ -131,7 +131,7 @@ get_header();  ?>
                  <p>
                    <?php echo excerpt(20); ?>
                  </p>
-                 <a class="blog___readmore" href="<?php the_permalink(); ?>">Read More</a>
+                 <a class=".blog___readmore" href="<?php the_permalink(); ?>">Read More</a>
               </div>
              </div>
          <?php endwhile; ?>
