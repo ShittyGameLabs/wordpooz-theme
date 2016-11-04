@@ -1,0 +1,19 @@
+.about___team---container{
+    display:flex;
+    margin:0 auto;
+    justify-content: space-between;
+}
+.about___team---box{
+    border:1px solid black;
+    padding:20px;
+    display:flex;
+    width:46%;
+    margin:0 1%;
+    .text-box{
+        align-self:center;
+        width:50%;
+    }
+    img{
+        max-width:100%;
+    }
+}

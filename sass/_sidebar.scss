@@ -9,9 +9,10 @@
 		}
 	}
 }
-
-input[type=search] {
+input[type=search],input[type=submit]{
 	border: 0;
+}
+input[type=search] {
 	width: 200px;
 	padding: 5px;
 	height: 30px;
@@ -20,8 +21,13 @@ input[type=search] {
 
 input[type=submit] {
 	width: 100px;
-	@include fontStyle($font, 0.8rem, 400, white, 2px);
+	text-transform: uppercase;
 	background: black;
-	border: 0;
 	height: 40px;
+	@include fontStyle($font, 0.9rem, 400, white, 2px);
+	&:hover {
+	    cursor: pointer;
+	    cursor: hand;
+	    background: darken($grey, 20);
+	}
 }
