@@ -17,14 +17,24 @@ get_header();  ?>
     <div class="about___team---container">
   <?php while(have_rows('team-info-box')) : the_row(); ?>
       <div class="about___team---box clearfix">
-      <?php  $teamImage = get_sub_field('team-picture') ?>
-      <div class="image-box">
-        <img src="<?php echo $teamImage['url'] ?>" alt="">
-      </div>
-      <div class="text-box">
-        <h2><?php the_sub_field('team-name') ?></h2>
-        <p><?php the_sub_field('team-description') ?></p>
-      </div>
+        <div class="inner-wrapper">
+        <?php  $teamImage = get_sub_field('team-picture') ?>
+        <div class="image-box">
+          <img src="<?php echo $teamImage['url'] ?>" alt="">
+        </div>
+          <div class="text-box">
+            <h2><?php the_sub_field('team-name') ?></h2>
+            <p><?php the_sub_field('team-tagline') ?></p>        
+            <ul class = "about___social">
+              <li><a href="<?php the_sub_field('about-linkedin')?>"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="<?php the_sub_field('about-twitter')?>"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="<?php the_sub_field('about-instagram')?>"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <p><?php the_sub_field('team-description') ?></p>
+        </div>
       </div>
   <?php endwhile ?>
     </div>
