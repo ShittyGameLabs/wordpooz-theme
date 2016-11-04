@@ -159,6 +159,8 @@
 		display: block;
 		transition: 0.3s all ease;
 		&:hover {
+			cursor: pointer;
+			cursor: hand;
 			background: darken($grey, 20);
 		}
 	}

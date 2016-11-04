@@ -128,10 +128,10 @@ get_header();  ?>
               </p>
               <div class="blog___excerpt">
                 <h3><?php the_title(); ?></h3>
-                <?php $content = get_the_excerpt(); ?>
                  <p>
-                   <?php echo $content ?>
+                   <?php echo excerpt(20); ?>
                  </p>
+                 <a class="blog___readmore" href="<?php the_permalink(); ?>">Read More</a>
               </div>
              </div>
          <?php endwhile; ?>
