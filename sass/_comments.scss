@@ -1,5 +1,10 @@
+
 #comments .navigation {
 	padding: 0 0 18px;
+}
+
+.comments-title {
+		@include fontStyle($montserrat, 1.5rem, 700, black, 2px);
 }
 
 h3 {
@@ -11,6 +16,7 @@ h3 {
 	}
 	&#comments-title {
 		padding: 24px 0;
+		@include fontStyle($montserrat, 2.5rem, 700, black, 2px);
 	}
 }
 
@@ -181,7 +187,7 @@ h3#reply-title {
 		}
 	}
 	.form-submit {
-		margin: 0 0 24px;
+		margin: 20px 0 20px;
 		input {
 			width: 200px;
 			font-size: 0.8rem;
@@ -224,4 +230,31 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
 	margin: 0;
+}
+
+.comment-author.vcard {
+	img {
+		float: left;
+		height: 50px;
+		width: 50px;
+		margin-right: 20px;
+	}
+}
+
+ol {
+	list-style: none;
+}
+
+.comments-area {
+	margin-top: 50px;
+}
+
+b.fn {
+	text-transform: uppercase;
+	@include fontStyle($montserrat, 0.8rem, 700, black, 1px);
+}
+
+time {
+	@include fontStyle($font, 0.7rem, 400, $grey, 1px);
+	text-transform: uppercase;
 }
