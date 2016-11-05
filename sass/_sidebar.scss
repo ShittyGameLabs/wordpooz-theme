@@ -10,14 +10,12 @@
 	}
 }
 input[type=search],input[type=submit]{
-	border-radius:3px;
 	border: 0;
 }
 input[type=search] {
-	box-shadow: 0 0 3px rgba(0,0,0,0.4);
 	width: 200px;
 	padding: 5px;
-	height: 35px;
+	height: 30px;
 	@include fontStyle($font, 0.8rem, 400, $darkgrey, 1px);
 }
 
@@ -25,7 +23,11 @@ input[type=submit] {
 	width: 100px;
 	text-transform: uppercase;
 	background: black;
-	border: 0;
-	height: 45px;
+	height: 40px;
 	@include fontStyle($font, 0.9rem, 400, white, 2px);
+	&:hover {
+	    cursor: pointer;
+	    cursor: hand;
+	    background: darken($grey, 20);
+	}
 }
