@@ -52,3 +52,12 @@ body {
 	margin: 0 auto;
 	max-width: 1140px;
 }
+
+header {
+	h1 {
+		@include fontStyle($montserrat, 2.5rem, 700, white, 10px);
+	}
+	h2 {
+		@include fontStyle($montserrat, 1.2rem, 400, white, 5px);
+	}
+}
