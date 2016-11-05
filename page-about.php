@@ -5,11 +5,11 @@
 */
 
 get_header();  ?>
-<?php $aboutImage = get_field('about-header-image',$pageId) ?>
+<?php $aboutImage = get_field('about-header-image') ?>
 <header class=blog___header id="nav___anchor" style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $aboutImage['url'] ?>)">
     <hgroup class="wrapper">
-      <h1><?php the_field('about-header',$pageId) ?></h1>
-      <h2><?php the_field('about-tagline',$pageId) ?></h2>
+      <h1><?php the_field('about-header') ?></h1>
+      <h2><?php the_field('about-tagline') ?></h2>
     </hgroup>
 </header>
 <main>

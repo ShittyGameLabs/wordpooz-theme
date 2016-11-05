@@ -19,6 +19,18 @@ myApp.init = function() {
     myApp.revealNav();
   });
 }
+//hambuger menu function
+$("#hamburger").on('click',function(){
+  console.log(this);
+  $("#hamburger").fadeOut();
+  $('#menu-top-nav').slideDown();
+  $('#close').fadeIn();
+});
+$("#close").on('click',function(){
+  $("#hamburger").fadeIn();
+  $('#menu-top-nav').slideUp();
+  $('#close').fadeOut();
+});
 //doc ready
 $(function(){
   myApp.init();
