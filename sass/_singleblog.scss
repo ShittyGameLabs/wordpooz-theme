@@ -1,0 +1,12 @@
+.entry-title{
+    margin:20px 0;
+    @include fontStyle($montserrat, 2.5rem, 700, black, 2px);
+}
+.entry-meta{
+    margin:15px 0 ;
+    @include fontStyle($montserrat, 1rem, 700, $grey, 2px);
+}
+
+.blog-content{
+    margin-top:5%;
+}

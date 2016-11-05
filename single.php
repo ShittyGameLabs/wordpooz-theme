@@ -1,13 +1,19 @@
-<?php get_header(); ?>
+<!--/*
+	Template Name: Single Blog Post
+*/-->
 
-<div class="main">
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php get_header(); ?>
+<header class='blog___header' id="nav___anchor" style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php the_field('post-header-image') ?>)">
+    <hgroup class="wrapper">
+      <h1>Blog</h1>
+    </hgroup>
+</header>
+<div class="main blog-content">
   <div class="container">
     <div class="content">
-      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
-
           <div class="entry-meta">
             <?php hackeryou_posted_on(); ?>
           </div><!-- .entry-meta -->
@@ -19,17 +25,7 @@
               'after' => '</div>'
             )); ?>
           </div><!-- .entry-content -->
-
-          <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-          </div><!-- .entry-utility -->
         </div><!-- #post-## -->
-
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-        </div><!-- #nav-below -->
 
         <?php comments_template( '', true ); ?>
 
