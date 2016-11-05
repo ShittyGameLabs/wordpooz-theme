@@ -1,3 +1,7 @@
+body {
+  background: $lightgrey;
+}
+
 .entry-title{
     margin:20px 0;
     @include fontStyle($montserrat, 2.5rem, 700, black, 2px);
@@ -9,4 +13,17 @@
 
 .blog-content{
     margin-top:5%;
+}
+
+.single .content {
+  padding: 3%;
+  background: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  margin-bottom: 5%;
+}
+
+h3 {
+  @include fontStyle($montserrat, 1rem, 700, black, 3px);
+  text-transform: uppercase;
+  margin: 20px 0;
 }
