@@ -24,7 +24,7 @@ input[type=submit] {
 	text-transform: uppercase;
 	background: black;
 	height: 40px;
-	@include fontStyle($font, 0.9rem, 400, white, 2px);
+	@include fontStyle($font, 0.8rem, 400, white, 2px);
 	&:hover {
 	    cursor: pointer;
 	    cursor: hand;
