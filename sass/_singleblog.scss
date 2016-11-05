@@ -6,3 +6,7 @@
     margin:15px 0 ;
     @include fontStyle($montserrat, 1rem, 700, $grey, 2px);
 }
+
+.blog-content{
+    margin-top:5%;
+}
