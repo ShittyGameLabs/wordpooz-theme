@@ -40,5 +40,9 @@ main {
   display: flex;
   li {
     margin-right: 20px;
+    transition: 0.3s all ease;
+    &:hover {
+      color: $grey;
+    }
   }
 }
