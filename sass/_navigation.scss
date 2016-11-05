@@ -34,3 +34,50 @@ nav {
 		max-height: 50px;
 	}
 }
+
+#hamburger,#close{
+	display:none;
+	font-size:2rem;
+	color:white;
+	cursor:pointer;
+}
+#close{
+	position:absolute;
+	right:0;
+	top:5%;
+}
+
+@media all and (max-width: 767px){
+	nav{
+		.wrapper{
+			width:100%;
+		}
+	}
+	#hamburger,#close{
+		display:block;
+		z-index:100;
+	}
+	#close{
+		display:none;
+	}
+	#menu-top-nav {
+		display:none;
+		position:absolute;
+		width:100%;
+		top:0;
+		background:rgba(0,0,0,0.9);
+		li {
+			display: block;
+			text-align:center;
+			margin:0;
+			a{
+				margin:0 auto;
+				width:150px;
+				font-size:1.4rem;
+				display:block;
+				padding:15px;
+			}
+		}
+	}
+
+}
