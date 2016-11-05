@@ -18,6 +18,12 @@
   @include fontStyle($montserrat, 0.8rem, 400, $grey, 2px);
   text-transform: uppercase;
   margin: 15px 0;
+  a {
+    transition: 0.3s all ease;
+    &:hover {
+      color: lighten($grey, 20%);
+    }
+  }
 }
 
 .blog___content {
@@ -39,6 +45,12 @@
   @include fontStyle($font, 0.8rem, 400, $grey, 2px);
   text-transform: uppercase;
   margin-bottom: 10px;
+  a {
+    transition: 0.3s all ease;
+    &:hover {
+      color: lighten($grey, 20%);
+    }
+  }
 }
 
 .blog___content--readmore {
@@ -54,6 +66,7 @@
   display: block;
   color: white;
   &:hover {
+    color: white;
     cursor: pointer;
     cursor: hand;
     background: darken($grey, 20);

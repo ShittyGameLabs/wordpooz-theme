@@ -26,7 +26,7 @@ nav {
 				@include fontStyle($montserrat, 0.8rem, 400, $lightgrey, 3px);
 				transition: 0.3s all ease;
 				&:hover {
-					color: white;
+					color: darken($lightgrey, 20%);
 				}
 			}
 	}
