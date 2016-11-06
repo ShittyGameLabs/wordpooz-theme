@@ -1,4 +1,4 @@
-.footer___social-media {
+.footer___social-media---text {
 		clear: both;
 		background: black;
 		padding: 50px 0;
@@ -15,7 +15,7 @@
 			list-style: none;
 			li {
 				text-transform: uppercase;
-				padding: 0 50px;
+				padding: 0 5vw;
 				position: relative;
 				a {
 					display: block;
@@ -32,11 +32,43 @@
 					width: 1px;
 					top: 25%;
 					transform: translateY(-25%);
-					right: 0%;
+					left: 115%;
 				}
 			}
 		}
 }
+
+.footer___social-media---icon  {
+	display: none;
+	clear: both;
+	background: black;
+	padding: 50px 0;
+	.wrapper {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+	}
+	ul {
+		margin: auto;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		list-style: none;
+		width: 50%;
+		li {
+			margin: 0 auto 50px auto;
+			a {
+				display: block;
+				@include fontStyle($montserrat, 1.3rem, 700, $lightgrey, 3px);
+				transition: 0.3s all ease;
+				&:hover {
+					color: $grey;
+				}
+			}
+		}
+	}
+}
+
 .copyright {
 	padding: 20px 0;
 	background: #222;

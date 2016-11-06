@@ -5,15 +5,15 @@ a {
 
 section{
 	h1 {
-		@include fontStyle($montserrat, 1.8rem, 700, $darkgrey, 3px);
+		@include fontStyle($montserrat, 2.3rem, 700, white, 3px);
 		margin-bottom: 10px;
 	}
 	h2{
-		@include fontStyle($font, 0.8rem, 400, $grey, 2px);
+		@include fontStyle($font, 0.8rem, 400, white, 2px);
 		margin-bottom: 10px;
 	}
 	h3 {
-		@include fontStyle($montserrat, 1rem, 700, $darkgrey, 2px);
+		@include fontStyle($montserrat, 1rem, 700, white, 2px);
 	}
 	h1, h2 {
 		text-align: center;

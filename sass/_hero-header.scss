@@ -11,10 +11,10 @@
 	filter: saturate(0.5);
 	background:black;
 	h1 {
-		@include fontStyle($montserrat, 4.5rem, 700, white, 15px);
+		@include fontStyle($montserrat, calc(2.5rem + 2vw), 700, white, 15px);
 	}
 	h2 {
-		@include fontStyle($montserrat, 1.2rem, 400, white, 10px);
+		@include fontStyle($montserrat, calc(0.6rem + 0.6vw), 400, white, 10px);
 	}
 	.btn___header {
 		display: block;
@@ -36,10 +36,9 @@
 	}
 }
 #bg{
-	height:105vh;
+	height:98vh;
 	min-height:600px;
 	width:105%;
-	background-size:110%;
 	background-position: center;
 	background-repeat: no-repeat;
 }

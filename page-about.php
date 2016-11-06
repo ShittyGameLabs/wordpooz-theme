@@ -15,6 +15,7 @@ get_header();  ?>
 <main id="nav___anchor">
   <div class="wrapper">
     <h2 class="about-team"><?php the_field('team-title'); ?></h2>
+    <hr>
     <div class="about___team---container">
   <?php while(have_rows('team-info-box')) : the_row(); ?>
       <div class="about___team---box clearfix">
