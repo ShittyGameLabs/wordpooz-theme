@@ -9,6 +9,7 @@
 	display: -ms-flex;
 	display: flex;
 	filter: saturate(0.5);
+	background:black;
 	h1 {
 		@include fontStyle($montserrat, 4.5rem, 700, white, 15px);
 	}
@@ -33,4 +34,19 @@
 	.hero-content {
 		margin: auto;
 	}
+}
+#bg{
+	height:105vh;
+	min-height:600px;
+	width:105%;
+	background-size:110%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.mouse-bg {
+	right: 0;
+	bottom: 0;
+	top: 0;
+	position: absolute;
+	z-index: -1;
 }

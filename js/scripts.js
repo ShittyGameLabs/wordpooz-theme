@@ -18,6 +18,7 @@ myApp.init = function() {
   $(window).scroll(function() {
     myApp.revealNav();
   });
+  $('#bg').mouseParallax({ moveFactor: 1 });
 }
 //hambuger menu function
 $("#hamburger").on('click',function(){
