@@ -2,6 +2,12 @@ main {
   padding: 100px 0;
 }
 
+.about-team {
+  @include fontStyle($montserrat, 2rem, 700, black, 1px);
+  text-align: content;
+  margin-bottom: 20px;
+}
+
 .about___team---container{
     display:flex;
     margin:0 auto;
