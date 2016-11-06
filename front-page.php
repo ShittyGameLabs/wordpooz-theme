@@ -17,7 +17,8 @@ get_header();  ?>
 <section class="about" id="nav___anchor">
   <div class="wrapper">
       <h1><?php the_field('about-title'); ?></h1>
-      <h2><?php the_field('about-tagline'); ?></h2>
+      <hr>
+      <!-- <h2><?php the_field('about-tagline'); ?></h2> -->
         <div class="about___icons">
       <?php
         while(have_rows('about-icons')) : the_row();
@@ -37,7 +38,8 @@ get_header();  ?>
 <section class="projects" id="projects">
   <div class="wrapper">
     <h1><?php the_field('project-title') ?></h1>
-    <h2><?php the_field('project-tagline') ?></h2>
+    <hr>
+    <!-- <h2><?php the_field('project-tagline') ?></h2> -->
       <div class="project-wrapper">
         <div class="figure-container-1">
         <?php while(have_rows('project-box')) : the_row(); ?>
@@ -47,7 +49,7 @@ get_header();  ?>
                 <div class="project-text">
                   <h3><?php the_sub_field('project-name') ?></h3>
                   <p>
-                    <?php the_sub_field('project-description') ?>
+                    <!-- <?php the_sub_field('project-description') ?> -->
                   </p>
                 </div>
               </div>
@@ -62,7 +64,7 @@ get_header();  ?>
                 <div class="project-text">
                   <h3><?php the_sub_field('project-name-two') ?></h3>
                   <p>
-                    <?php the_sub_field('project-description-two') ?>
+                    <!-- <?php the_sub_field('project-description-two') ?> -->
                   </p>
                 </div>
               </div>
@@ -77,7 +79,7 @@ get_header();  ?>
                   <div class="project-text">
                     <h3><?php the_sub_field('project-name-three') ?></h3>
                     <p>
-                      <?php the_sub_field('project-description-three') ?>
+                      <!-- <?php the_sub_field('project-description-three') ?> -->
                     </p>
                   </div>
                 </div>
@@ -90,7 +92,7 @@ get_header();  ?>
 <section class="work">
   <?php while(have_rows('work-container')) : the_row();  ?>
   <?php $workImage = get_sub_field('work-bg-image'); ?>
-  <div class="work-container" style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $workImage['url']?>); background-position:center">
+  <div class="work-container" style="background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(<?php echo $workImage['url']?>); background-position:center">
     <div>
       <h2><?php the_sub_field('work-title') ?></h2>
       <p><?php the_sub_field('work-tagline') ?></p>
@@ -101,7 +103,8 @@ get_header();  ?>
 <section class="blog">
   <div class="wrapper">
     <h1><?php the_field('blog-title'); ?></h1>
-    <h2><?php the_field('blog-tagline'); ?></h2>
+    <hr>
+    <!-- <h2><?php the_field('blog-tagline'); ?></h2> -->
     <div class="blog___wrapper">
       <?php
           $recentPosts = new WP_Query(array(

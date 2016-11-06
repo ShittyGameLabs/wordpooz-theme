@@ -14,9 +14,9 @@
 	<div class="wrapper">
 		<?php $custom_logo_id = get_theme_mod( 'custom_logo' );?>
 		<?php $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
-		<img class="nav___logo" src="<?php echo $image[0]; ?> " alt="" />
-		<i class="fa fa-close" id="close"></i>
-		<i class="fa fa-bars" id="hamburger"></i>
+		<a href="http://meaganpau.com/mwtheme"><img class="nav___logo" src="<?php echo $image[0]; ?> " alt="" /></a>
+		<p id="close"> ｘ </p>
+		<p id="hamburger"> &#9776; </p>
 		<?php wp_nav_menu( array(
 			'container' => false,
 			'theme_location' => 'primary'

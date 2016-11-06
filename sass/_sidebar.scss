@@ -1,6 +1,10 @@
 .sidebar {
 	width: 30%;
 	float: left;
+	color: white;
+	h3 {
+		color: white;
+	}
 	ul {
 		margin: 0;
 		padding: 0;
@@ -28,7 +32,7 @@ input[type=search] {
 input[type=submit] {
 	width: 100px;
 	text-transform: uppercase;
-	background: black;
+	background: $darkgrey;
 	height: 40px;
 	@include fontStyle($font, 0.8rem, 400, white, 2px);
 	transition: 0.3s all ease;

@@ -1,10 +1,18 @@
 <footer>
   <div class="footer___social-media">
     <div class="wrapper">
-      <?php wp_nav_menu( array(
-     'container' => false,
-     'theme_location' => 'footer'
-   )); ?>
+      <div class="footer___social-media---text">
+        <?php wp_nav_menu( array(
+       'container' => false,
+       'theme_location' => 'footer'
+     )); ?>
+      </div>
+      <div class="footer___social-media---icon">
+        <?php wp_nav_menu( array(
+       'container' => false,
+       'theme_location' => 'footer-icon'
+     )); ?>
+      </div>
     </div>
   </div>
   <div class="copyright">

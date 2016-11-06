@@ -8,6 +8,36 @@ $largeScreen: 1400px;
     .wrapper{
         width:100%;
     }
+    aside.sidebar {
+      display: none;
+    }
+    .content {
+      width: 90%;
+      float: none;
+      margin: 0 auto;
+    }
+    .footer___social-media---icon {
+      display: initial;
+    }
+    .footer___social-media---text {
+      display: none;
+    }
+    .about___team---container {
+      display: initial;
+      text-align: center;
+    }
+    .about___team---box, .inner-wrapper {
+      display: initial;
+    }
+    .about___team---box, .text-box {
+      width: 100%;
+    }
+    .about___social {
+      justify-content: center;
+    }
+    .about___team---box {
+      margin-bottom: 80px;
+    }
 }
 
 @media all and (max-width:$tabletPortrait){
@@ -41,6 +71,8 @@ $largeScreen: 1400px;
     .contact{
         .contact___wrapper{
             flex-wrap:wrap;
+            width: 80%;
+            margin: 0 auto;
         .contact___field{
             flex:1 1 47%;
             margin:0;
@@ -51,7 +83,7 @@ $largeScreen: 1400px;
             }
             &::before{
                 top:10px;
-            }  
+            }
         }
         }
     }

@@ -26,7 +26,8 @@ function theme_setup() {
   * adding additional menus to the array. */
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation',
-		'footer' => 'Footer Social Media'
+		'footer' => 'Footer Social Media',
+		'footer-icon' => 'Footer Social Media Icon'
 	) );
 
 	/*
