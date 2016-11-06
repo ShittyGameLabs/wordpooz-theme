@@ -5,7 +5,7 @@
 */
 
 get_header();  ?>
-<?php $aboutImage = get_field('about-header-image',$pageId) ?>
+<?php $aboutImage = get_field('about-header-image') ?>
 <header class="blog___header"  style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $aboutImage['url'] ?>)">
     <hgroup class="wrapper">
       <h1><?php the_field('about-header') ?></h1>
@@ -14,7 +14,7 @@ get_header();  ?>
 </header>
 <main id="nav___anchor">
   <div class="wrapper">
-    <h2><?php the_field('team-title'); ?></h2>
+    <h2 class="about-team"><?php the_field('team-title'); ?></h2>
     <div class="about___team---container">
   <?php while(have_rows('team-info-box')) : the_row(); ?>
       <div class="about___team---box clearfix">
