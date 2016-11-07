@@ -7,7 +7,7 @@
       <h2><?php the_field('blog-tagline',$pageId) ?></h2>
     </hgroup>
 </header>
-<section class="blog___main" id="nav___anchor">
+<section class="blog___main clearfix" id="nav___anchor">
   <div class="container">
     <div class="content clearfix">
       <?php // Start the loop ?>
