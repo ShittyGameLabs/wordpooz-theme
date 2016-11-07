@@ -17,26 +17,29 @@ $largeScreen: 1400px;
       margin: 0 auto;
     }
     .footer___social-media---icon {
-      display: initial;
+      display: block;
     }
     .footer___social-media---text {
       display: none;
     }
     .about___team---container {
-      display: initial;
+      display: block;
       text-align: center;
     }
-    .about___team---box, .inner-wrapper {
-      display: initial;
+    .about___team---box .inner-wrapper {
+      display: block;
     }
-    .about___team---box, .text-box {
+    .about___team---box .text-box {
       width: 100%;
     }
     .about___social {
       justify-content: center;
     }
     .about___team---box {
-      margin-bottom: 80px;
+      margin-bottom: 20px;
+    }
+    .contact___field:before {
+      display: none;
     }
 }
 
