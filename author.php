@@ -2,7 +2,7 @@
 
 <?php $author_id = get_the_author_meta('ID'); ?>
 <?php $authorImage = get_field('author-header-image', 'user_'. $author_id); ?>
-<header class="blog___header"  style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $authorImage['url'] ?>)">
+<header class="blog___header"  style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(<?php echo $authorImage['url'] ?>)">
     <hgroup class="wrapper">
       <h1><?php the_author(); ?></h1>
     </hgroup>
