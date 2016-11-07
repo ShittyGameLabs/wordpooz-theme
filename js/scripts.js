@@ -18,7 +18,7 @@ myApp.init = function() {
   $(window).scroll(function() {
     myApp.revealNav();
   });
-  $('#bg').mouseParallax({ moveFactor: 1 });
+  $('#bg').mouseParallax({ moveFactor: 5 });
 }
 //hambuger menu function
 $("#hamburger").on('click',function(){
@@ -32,6 +32,19 @@ $("#close").on('click',function(){
   $('#menu-top-nav').slideUp();
   $('#close').fadeOut();
 });
+
+$(window).on('resize', function(){
+  if (window.matchMedia('(max-width: 767px)').matches){
+    $('#hamburger').show();
+    $('#menu-top-nav').hide(); 
+      }
+    else{
+        $('#close').hide();
+        $('#menu-top-nav').show();
+        $('#hamburger').hide(); 
+    } 
+});
+
 //doc ready
 $(function(){
   myApp.init();
