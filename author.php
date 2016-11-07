@@ -1,44 +1,45 @@
-<?php get_header(); ?>
-<header>
-  
+<?php get_header();  ?>
+<?php $aboutImage = get_field('about-header-image') ?>
+<header class="blog___header"  style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $aboutImage['url'] ?>)">
+    <hgroup class="wrapper">
+      <h1><?php the_author(); ?></h1>
+    </hgroup>
 </header>
-<div class="main">
-  <div class="container">
-    <div class="content">
-      <?php
-      	/* Queue the first post, that way we know who
-      	 * the author is when we try to get their name,
-      	 * URL, description, avatar, etc.
-      	 */
-      	if ( have_posts() )
-      		the_post();
-      ?>
+<section class="author" id="nav___anchor">
+  <div class="main">
+    <div class="container">
+      <div class="content">
+        <?php
+        	/* Queue the first post, that way we know who
+        	 * the author is when we try to get their name,
+        	 * URL, description, avatar, etc.
+        	 */
+        	if ( have_posts() )
+        		the_post();
+        ?>
 
-      <h1>Author Archives:
-        <a class="name" href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>">
-          <?php the_author(); ?>
-        </a>
-      </h1>
+          <h2>
+            <a class="name" href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>"></a>
+          </h2>
+        <?php
+        	// If a user has filled out their description, show a bio on their entries.
+        	if ( get_the_author_meta('description') ) : ?>
 
-      <?php
-      	// If a user has filled out their description, show a bio on their entries.
-      	if ( get_the_author_meta('description') ) : ?>
+            <h2>About <?php the_author(); ?> </h2>
+        		<?php echo get_avatar( get_the_author_meta('user_email'), 60); ?>
+        		<?php the_author_meta('description'); ?>
 
-          <h2>About <?php the_author(); ?> </h2>
-      		<?php echo get_avatar( get_the_author_meta('user_email'), 60); ?>
-      		<?php the_author_meta('description'); ?>
+          <?php endif; ?>
 
-        <?php endif; ?>
+        	<?php
+        		rewind_posts();
+        		get_template_part('loop', 'author');
+        	?>
+      </div> <!-- /.content -->
 
-      	<?php
-      		rewind_posts();
-      		get_template_part('loop', 'author');
-      	?>
-    </div> <!-- /.content -->
+      <?php get_sidebar(); ?>
 
-    <?php get_sidebar(); ?>
-
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
-
+    </div> <!-- /.container -->
+  </div> <!-- /.main -->
+</section>
 <?php get_footer(); ?>
