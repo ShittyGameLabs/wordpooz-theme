@@ -1,7 +1,7 @@
 <?php get_header();  ?>
 <?php $pageId = get_option( 'page_for_posts' );?>
 <?php $blogImage = get_field('blog-header-image',$pageId) ?>
-<header class="blog___header" style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),url(<?php echo $blogImage['url'] ?>)">
+<header class="blog___header" style="background-image:linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(<?php echo $blogImage['url'] ?>)">
     <hgroup class="wrapper">
       <h1><?php the_field('blog-header',$pageId) ?></h1>
       <h2><?php the_field('blog-tagline',$pageId) ?></h2>

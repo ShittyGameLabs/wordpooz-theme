@@ -19,7 +19,8 @@
     <div class="wrapper">
       <p>
         © <?php echo date("Y"); ?>
-         <?php wp_title(); ?>
+          <?php $blog_title = get_bloginfo( 'name' ); ?>
+         <?php echo $blog_title ?>
       </p>
       <a href="#top">To The Top ^</a>
     </div>
